@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test  name="POMRoutingTest2" parallel="classes" thread-count="2">
+        <classes>
+            <class name="TestScenarios.AboutPageTest">
+                <methods>
+                    <include name="TestAboutPageUI" />
+                </methods>
+            </class>
+            <class name="TestScenarios.ContactPageTest">
+                <methods>
+                    <include name="TestContactPageUI" />
+                </methods>
+            </class>
+            <class name="TestScenarios.HeaderSectionTest">
+                <methods>
+                    <include name="TextHeaderSectionUI" />
+                    <include name="TestNavigationClickingNavbarAbout" />
+                    <include name="TestClickNavbarContact" />
+                    <include name="TestClickNavbarHome" />
+                </methods>
+            </class>
+            <class name="TestScenarios.HomePageTest">
+                <methods>
+                    <include name="TestHomePageUI" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
